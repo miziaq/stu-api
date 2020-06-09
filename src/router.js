@@ -8,9 +8,9 @@ const updateCouriers = require('./routes/update-couriers');
 const removeCouriers = require('./routes/remove-couriers');
 
 router.get('/health', healthCheck);
-router.post('/couriers/add', addCouriers);
+router.post('/couriers/', addCouriers);
 router.get('/couriers/lookup', lookupCouriers);
-router.put('/couriers', updateCouriers);
+router.put('/couriers/update', updateCouriers);
 router.delete('/couriers/remove', removeCouriers);
 
 module.exports = router;
