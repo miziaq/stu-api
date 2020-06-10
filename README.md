@@ -26,7 +26,7 @@ to run in docker (please note download of node12 takes a while):
 
 to add new courier:
 ```
-curl -X POST http://localhost:9000/couriers/add -H "Content-Type: application/json" --data '
+curl -X POST http://localhost:3000/couriers/add -H "Content-Type: application/json" --data '
 {
   "max_capacity": 45
 }'
@@ -34,7 +34,7 @@ curl -X POST http://localhost:9000/couriers/add -H "Content-Type: application/js
 
 to update courier's capacity:
 ```
-curl -X PUT http://localhost:9000/couriers -H "Content-Type: application/json" --data '
+curl -X PUT http://localhost:3000/couriers -H "Content-Type: application/json" --data '
 {
   "id": 3,
   "req_capacity": 3
@@ -43,7 +43,7 @@ curl -X PUT http://localhost:9000/couriers -H "Content-Type: application/json" -
 
 to remove couriers with given id:
 ```
-curl -X DELETE http://localhost:9000/couriers/remove -H "Content-Type: application/json" --data '
+curl -X DELETE http://localhost:3000/couriers/remove -H "Content-Type: application/json" --data '
 {
   "id": 1
 }'
@@ -51,7 +51,7 @@ curl -X DELETE http://localhost:9000/couriers/remove -H "Content-Type: applicati
 
 to find couriers with required capacity:
 ```
-curl -X GET http://localhost:9000/couriers/lookup -H "Content-Type: application/json" --data '
+curl -X GET http://localhost:3000/couriers/lookup -H "Content-Type: application/json" --data '
 {
   "capacity_required": 1
 }'
